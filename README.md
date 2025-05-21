@@ -17,6 +17,7 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
   - [📋 Requirements](#-requirements)
     - [Functional requirements (FR):](#functional-requirements-fr)
     - [Non Functional Requirements (NFR):](#non-functional-requirements-nfr)
+  - [🛠 Constrains](#-constrains)
   - [🧠 Requirements Analysis \& Design](#-requirements-analysis--design)
     - [1. Use Case Diagram: visual representation of system functionality from the user's point of view.](#1-use-case-diagram-visual-representation-of-system-functionality-from-the-users-point-of-view)
     - [2. Class Diagram](#2-class-diagram)
@@ -60,6 +61,14 @@ A vacation tracking system will provide the employee with a handful way to manag
 6. The system must ensure role-based access control (RBAC) for different user types (employees, managers, HR).
 
 ---
+
+## 🛠 Constrains
+1. The system must not exceed the defined budget and timeline
+2. The system must ensure 99% uptime.
+3. The system must support at least 100 concurrent users without performance degradation.
+4. The system must work on both mobile and desktop with responsive design
+5. All access and changes to leave data must be logged.
+6. Must comply with different regional leave policies and employment contracts.
 
 ## 🧠 Requirements Analysis & Design
 
