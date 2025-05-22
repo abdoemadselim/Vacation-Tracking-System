@@ -22,6 +22,7 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
     - [1. Use Case Diagram: visual representation of system functionality from the user's point of view.](#1-use-case-diagram-visual-representation-of-system-functionality-from-the-users-point-of-view)
     - [2. Class Diagram](#2-class-diagram)
     - [3. Use Case-Specific Designs](#3-use-case-specific-designs)
+      - [Sequence Diagram](#sequence-diagram)
   - [📄 Use Case Specifications](#-use-case-specifications)
   - [🛠 Technologies (Optional Section)](#-technologies-optional-section)
   - [📚 References](#-references)
@@ -79,10 +80,9 @@ A vacation tracking system will provide the employee with a handful way to manag
 - Structured object model showing relationships.
 
 ### 3. Use Case-Specific Designs
-
 **Use Case: Manage Leave Request**  
-
-- Sequence Diagram  
+#### Sequence Diagram 
+  ![Sequence diagram](./diagrams/ManageLeaveRequestuseSequenceDiagrams.drawio.png)
 - Activity Diagram  
 - Pseudocode  
 - Flowchart  
