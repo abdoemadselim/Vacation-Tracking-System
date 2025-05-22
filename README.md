@@ -19,9 +19,8 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
     - [Non Functional Requirements (NFR):](#non-functional-requirements-nfr)
   - [🛠 Constrains](#-constrains)
   - [🧠 Requirements Analysis \& Design](#-requirements-analysis--design)
-    - [1. Use Case Diagram: visual representation of system functionality from the user's point of view.](#1-use-case-diagram-visual-representation-of-system-functionality-from-the-users-point-of-view)
-    - [2. Class Diagram](#2-class-diagram)
-    - [3. Use Case-Specific Designs](#3-use-case-specific-designs)
+    - [1. Use Case Diagram](#1-use-case-diagram)
+    - [2. Use Case-Specific Designs](#2-use-case-specific-designs)
       - [Sequence Diagram](#sequence-diagram)
       - [Flow Chart](#flow-chart)
   - [📄 Use Case Specifications](#-use-case-specifications)
@@ -74,13 +73,10 @@ A vacation tracking system will provide the employee with a handful way to manag
 
 ## 🧠 Requirements Analysis & Design
 
-### 1. Use Case Diagram: visual representation of system functionality from the user's point of view.
+### 1. Use Case Diagram
   ![Use Case Diagram](./diagrams/useCaseDiagram.png)
 
-### 2. Class Diagram
-- Structured object model showing relationships.
-
-### 3. Use Case-Specific Designs
+### 2. Use Case-Specific Designs
 **Use Case: Manage Leave Request**  
 #### Sequence Diagram 
   ![Sequence diagram](./diagrams/ManageLeaveRequestuseSequenceDiagrams.png)
