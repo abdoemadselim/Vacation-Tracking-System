@@ -23,16 +23,16 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
       - [Sequence Diagram](#sequence-diagram)
   - [](#)
       - [Flow Chart](#flow-chart)
-  - [`Pseudocode`](#pseudocode)
+  - [Pseudocode](#pseudocode)
   - [📄 Use Case Specifications](#-use-case-specifications)
   - [🛠 Technologies (Optional Section)](#-technologies-optional-section)
   - [📚 References](#-references)
 ---
 
 ## 🧠 Problem Definition
-Organizations struggle and consume a significant amount of time managing employees leave requests, and it can take days for a leave request to be reviewed and acted upon, causing delays. To address this challenge, an automated vacation tracking system is essential to automate and accelerate this process while saving time and reducing frustration for both employees and the HR team
+Organizations struggle and consume a significant amount of time managing employees leave requests, and it can take days for a leave request to be reviewed and acted upon, causing delays. To address this challenge, an automated vacation tracking system is essential to automate and accelerate this process while saving time and reducing frustration for both employees and the HR team.
 ## 👓 Vision
-A vacation tracking system will provide the employees with an easy way to manage their own vacation time, sick leaves without having to be an expert in the company policies. It will help managers track their employees' vacations and availability.
+A vacation tracking system will provide the employees with an easy way to manage their own vacation time, sick leave without having to be an expert in the company policies. It will help managers track their employees' vacations and availability.
 ## 📋 Requirements
 ### Functional requirements (FR): 
 1. Employees can submit a leave request with desired start and end date.  
@@ -41,7 +41,7 @@ A vacation tracking system will provide the employees with an easy way to manage
 4. The system must support automatic approval for certain types of leave or under defined conditions (e.g., short duration, sufficient balance).  
 5. Employees can view their own leave balance.  
 6. HR users can access any relevant data for any employee, including leave balance, carryovers, leave history, etc.  
-7. The system must integrate with external HR systems to retrieve employee data which informs automatic workflows.  
+7. The system must integrate with external HR systems to retrieve employees data for automated workflows.
 8. The system must have a notification mechanism (e.g., email, in-app) to:  
     - inform employees when their request is approved/rejected  
     - alert employees about upcoming end-of-leave  
@@ -66,11 +66,9 @@ A vacation tracking system will provide the employees with an easy way to manage
 
 ## 🛠 Constraints
 1. The system must not exceed the defined budget and timeline
-2. The system must ensure 99% uptime.
-3. The system must support at least 100 concurrent users without performance degradation.
-4. The system must work on both mobile and desktop devices with a responsive design
-5. All access and changes to leave data must be logged.
-6. Must comply with different regional leave policies and employment contracts.
+2. The system must work on both mobile and desktop devices with a responsive design
+3. All access and changes to leave data must be logged.
+4. Must comply with different regional leave policies and employment contracts.
 
 ## 🧠 Requirements Analysis & Design
 
@@ -84,7 +82,7 @@ A vacation tracking system will provide the employees with an easy way to manage
 --
 #### Flow Chart
   ![Flow chart](./diagrams/manageLeaveRequestFlowcharts.png)
-  [`Pseudocode`](./manageLeaveRequestPseudocode.md)
+  [Pseudocode](./manageLeaveRequestPseudocode.md)
 ---
 
 ## 📄 Use Case Specifications
