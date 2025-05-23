@@ -23,7 +23,7 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
       - [Sequence Diagram](#sequence-diagram)
       - [ER Diagram](#er-diagram)
       - [Flow Chart](#flow-chart)
-      - [Pseudocode](#pseudocode)
+      - [Pseudocode for the four operations (submit/cancel/withdraw/edit) a leave request](#pseudocode-for-the-four-operations-submitcancelwithdrawedit-a-leave-request)
   - [📄 Use Case Specifications](#-use-case-specifications)
   - [🛠 Technologies](#-technologies)
   - [📚 References](#-references)
@@ -82,7 +82,7 @@ A vacation tracking system will provide the employees with an easy way to manage
   ![ER diagram](./diagrams/manageLeaveRequestERD.png)
 #### Flow Chart
   ![Flow chart](./diagrams/manageLeaveRequestFlowcharts.png)
-#### Pseudocode
+#### Pseudocode for the four operations (submit/cancel/withdraw/edit) a leave request
   [Pseudocode](./manageLeaveRequestPseudocode.md)
 
 
