@@ -24,8 +24,10 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
   - [](#)
       - [Flow Chart](#flow-chart)
   - [Pseudocode](#pseudocode)
+      - [ER Diagram](#er-diagram)
+  - [](#-1)
   - [📄 Use Case Specifications](#-use-case-specifications)
-  - [🛠 Technologies (Optional Section)](#-technologies-optional-section)
+  - [🛠 Technologies](#-technologies)
   - [📚 References](#-references)
 ---
 
@@ -84,6 +86,9 @@ A vacation tracking system will provide the employees with an easy way to manage
   ![Flow chart](./diagrams/manageLeaveRequestFlowcharts.png)
   [Pseudocode](./manageLeaveRequestPseudocode.md)
 ---
+#### ER Diagram 
+  ![ER diagram](./diagrams/manageLeaveRequestERD.png)
+--
 
 ## 📄 Use Case Specifications
 
@@ -93,11 +98,10 @@ A vacation tracking system will provide the employees with an easy way to manage
 
 ---
 
-## 🛠 Technologies (Optional Section)
+## 🛠 Technologies
 
 - UML tools: draw.io
 - Markdown for documentation
-- GitHub for version control
 
 ---
 
