@@ -40,21 +40,20 @@ A vacation tracking system will provide the employees with an easy way to manage
 1. Employees can submit a leave request with desired start and end date.  
 2. Managers (approvers) can approve or reject leave requests, with the option to provide a reason for rejection.  
 3. The system must support a fully automated workflow for processing leave requests based on organizational policies.  
-4. The system must support automatic approval for certain types of leave or under defined conditions (e.g., short duration, sufficient balance).  
-5. Employees can view their own leave balance.  
-6. HR users can access any relevant data for any employee, including leave balance, carryovers, leave history, etc.  
-7. The system must integrate with external HR systems to retrieve employees data for automated workflows.
-8. The system must have a notification mechanism (e.g., email, in-app) to:  
+4. Employees can view their own leave balance.  
+5. HR users can access any relevant data for any employee, including leave balance, carryovers, leave history, etc.  
+6. The system must integrate with external HR systems to retrieve employees data for automated workflows.
+7. The system must have a notification mechanism (e.g., email, in-app) to:  
     - inform employees when their request is approved/rejected  
     - alert employees about upcoming end-of-leave  
     - notify managers (approvers) of pending requests  
-9. The HR team can manually approve or reject requests in special cases (e.g., emergencies or out-of-policy requests).  
-10. The system must support special leave types, such as maternity/paternity leave, with manual intervention by HR.  
-11. The system must allow **report generation** for HR (e.g., department-level leave trends, unused leave statistics).  
-12. The system must **check for conflicts or overlaps**, such as multiple team members requesting leave at the same time.  
-13. The system must track audit logs of leave requests and approvals for accountability and compliance.  
-14. The system must allow managers to directly award personal leave time (with system-set limits).  
-15. The HR team can update the system leave policies.  
+8. The HR team can manually approve or reject requests in special cases (e.g., emergencies or out-of-policy requests).  
+9.  The system must support special leave types, such as maternity/paternity leave, with manual intervention by HR.  
+10. The system must allow **report generation** for HR (e.g., department-level leave trends, unused leave statistics).  
+11. The system must **check for conflicts or overlaps**, such as multiple team members requesting leave at the same time.  
+12. The system must track audit logs of leave requests and approvals for accountability and compliance.  
+13. The system must allow managers to directly award personal leave time (with system-set limits).  
+14. The HR team can update the system leave policies.  
 
 ### Non-Functional Requirements (NFR): 
 1. The system must be easy to use, with a clean and intuitive UI for both employees and HR/manager users.
@@ -94,7 +93,7 @@ A vacation tracking system will provide the employees with an easy way to manage
 
 | Use Case | Description |
 |----------|-------------|
-| [`Submit Leave Request`](use-cases/ManageLeaveRequest.md) | Employee submits/cancels/edits a leave request |
+| [`Submit Leave Request`](use-cases-specification/ManageLeaveRequest.md) | Employee submits/cancels/edits a leave request |
 
 ---
 

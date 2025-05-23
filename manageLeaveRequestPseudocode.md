@@ -15,28 +15,17 @@ function submitRequest:
         displayValidationErrors(validationErrors)
     createdLeaveRequest = createNewLeaveRequestInDatabase(leaveRequest)
     updateEmployeeLeaveBalance()
-    addLeaveRequestToManager'sList(createdLeaveRequest)
-    SendAnEmailNotificationToManager()
-```
-
-## Cancel Approved Request Function
-```
-function cancelApprovedRequest:
-    fetchEmployee'sLeaveRequests()
-    FOR index = 1 TO leave_request_list.length
-        DISPLAY leave_request_list[index].details
-    END FOR
-    SET selected_request = GET_CLICKED_ITEM(leave_request_list)
-    cancelRequest(selected_request)
-    updateEmployeeLeaveBalance()
-    removeLeaveRequestFromManager'sList(selected_request)
-    SendAnEmailNotificationToManager()
+    if needsManager'sApproval:
+        addLeaveRequestToManager'sPendingList(createdLeaveRequest)
+        SendAnEmailNotificationToManager()
+    else
+        approveRequestAutomatically()
 ```
 
 ## Edit Request Function
 ```
 function editRequest:
-    fetchEmployee'sLeaveRequests()
+    leave_request_list = fetchEmployee'sLeaveRequests()
     FOR index = 1 TO leave_request_list.length
         DISPLAY leave_request_list[index].details
     END FOR
@@ -57,16 +46,28 @@ function editRequest:
     SendAnEmailNotificationToManager()
 ```
 
-## Cancel Pending Request Function
+## Cancel Approved Request Function
 ```
-function cancelPendingRequest:
-    fetchEmployee'sLeaveRequests()
+function cancelApprovedRequest:
+    leave_request_list = fetchEmployee'sLeaveRequests()
     FOR index = 1 TO leave_request_list.length
         DISPLAY leave_request_list[index].details
     END FOR
     SET selected_request = GET_CLICKED_ITEM(leave_request_list)
     cancelRequest(selected_request)
     updateEmployeeLeaveBalance()
-    removeLeaveRequestFromManager'sList(leaveRequest)
+    SendAnEmailNotificationToManager()
+```
+
+## Withdraw Pending Request Function
+```
+function withdrawPendingRequest:
+    leave_request_list = fetchEmployee'sLeaveRequests()
+    FOR index = 1 TO leave_request_list.length
+        DISPLAY leave_request_list[index].details
+    END FOR
+    SET selected_request = GET_CLICKED_ITEM(leave_request_list)
+    withdrawRequest(selected_request)
+    removeLeaveRequestFromManager'sPendingList(leaveRequest)
     SendAnEmailNotificationToManager()
 ```

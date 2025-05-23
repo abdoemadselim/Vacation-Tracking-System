@@ -19,7 +19,7 @@
 | Postconditions                                                              |
 |------------------------------------------------------------------------------|
 | - A new leave request is created and saved                                  |
-| - Notification is sent to the manager                                       |
+| - A notification is sent to the manager                                       |
 
 ### Main Flow
 | Step | Description                                                                                                                                                   |
@@ -30,7 +30,7 @@
 | 4    | The employee submits the request.                                                                                                                             |
 | 5    | If the submitted information is incomplete or incorrect, relevant errors are shown.                                                                          |
 | 6    | The employee has the opportunity to change the information or cancel the request.                                                                            |
-| 7    | If passes validation, the employee is returned to the VTS home page. If the employee’s leave request requires manager approval, an email is sent to manager. |
+| 7    | If passes validation, an email is sent to manager, and the employee is returned to the VTS home page. If the employee’s leave request requires manager approval, it's added to the manager's pending list  |
 | 8    | The leave request is placed in a pending state.                                                                                                               |
 | 9    | The manager responds to the e-mail by clicking on the link embedded in the e-mail or by explicitly visiting the VTS.                                         |
 | 10   | The manager enters his / her own credentials to enter the system.                                                                                             |
@@ -42,12 +42,12 @@
 
 ---
 
-## Alternate Flow: Cancel Pending Request
+## Alternate Flow: Withdraw Pending Request
 
 ### Goals
 | Goals                                      |
 |-------------------------------------------|
-| - The employee wants to cancel a submitted request. |
+| - The employee wants to withdraw a submitted pending request. |
 
 ### Preconditions
 | Preconditions                                                                                                               |
@@ -58,8 +58,8 @@
 ### Postconditions
 | Postconditions                                                                                      |
 |------------------------------------------------------------------------------------------------------|
-| - A submitted leave request that's in pending state is cancelled.                                   |
-| - Notification is sent to the manager                                                               |
+| - A submitted leave request that's in a pending state is withdrawn.                                   |
+| - A notification is sent to the manager                                                               |
 | - The leave request is removed from the manager's pending requests list                             |
 
 ### Flow
@@ -89,7 +89,7 @@
 | Postconditions                                                                                  |
 |--------------------------------------------------------------------------------------------------|
 | - A submitted leave request that's already has been approved is cancelled.                      |
-| - Notification is sent to the manager.                                                          |
+| - A notification is sent to the manager.                                                          |
 | - The allowance time used to submit the leave request is returned back to the employee.         |
 
 ### Flow
@@ -119,13 +119,13 @@
 | Postconditions                                                                                      |
 |------------------------------------------------------------------------------------------------------|
 | - A submitted leave request that's in pending state is updated.                                     |
-| - Notification is sent to the manager.                                                              |
+| - A notification is sent to the manager.                                                              |
 
 ### Flow
 | Step | Description                                                                                                                                         |
 |------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1    | The systems uses the employee credentials to retrieve all the employee’s leave requests and display them.                                          |
 | 2    | The employee selects a leave request that’s currently in pending state and scheduled for the future and clicks on edit.                           |
-| 3    | The system displays an editable view of the request. The employee is allowed to change the title, date range, or leave type.                       |
+| 3    | The system displays an editable view of the request. The employee is allowed to change the title, description, date range, or leave type.                       |
 | 4    | The employee changes request information and submits the changes.                                                                                  |
 | 5    | An e-mail notification is sent to the manager, and the employee’s screen returns to the VTS home page.                                             |
