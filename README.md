@@ -56,10 +56,8 @@ A vacation tracking system will provide the employees with an easy way to manage
 ### Non-Functional Requirements (NFR): 
 1. The system must be easy to use, with a clean and intuitive UI for both employees and HR/manager users.
 2. Employees must be able to access only their own data; access to other employees’ data must be restricted according to roles and permissions.
-3. The system must support at least 100 concurrent users without performance degradation.
-4. The system must ensure 99% uptime.
-5. The system must be accessible on both desktop and mobile devices.
-6. The system must ensure role-based access control (RBAC) for different user types (employees, managers, HR).
+3. The system must be accessible on both desktop and mobile devices.
+4. The system must ensure role-based access control (RBAC) for different user types (employees, managers, HR).
 
 ---
 
