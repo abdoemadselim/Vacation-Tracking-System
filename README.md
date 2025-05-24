@@ -64,8 +64,9 @@ A vacation tracking system will provide the employees with an easy way to manage
 ---
 
 ## 🛠 Constraints
-1. The system must not exceed the defined budget and timeline
-2. The system must work on both mobile and desktop devices with a responsive design
+1. Is implemented as an extension to the existing intranet portal system, and
+uses the portal’s single-sign-on mechanisms for all authentication.
+2. The system must work on both mobile and desktop devices with a responsive design.
 3. All access and changes to leave data must be logged.
 4. Must comply with different regional leave policies and employment contracts.
 
