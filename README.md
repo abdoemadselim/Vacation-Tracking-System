@@ -81,7 +81,7 @@ A vacation tracking system will provide the employees with an easy way to manage
 #### ER Diagram 
   ![ER diagram](./diagrams/manageLeaveRequestERD.png)
 #### Flow Chart
-  ![Flow chart](./diagrams/manageLeaveRequestFlowcharts.png)
+  ![Flow chart](./diagrams/manageLeaveRequestFlowCharts.png)
 #### Pseudocode for the four operations (submit/cancel/withdraw/edit) a leave request
   [Pseudocode](./manageLeaveRequestPseudocode.md)
 
