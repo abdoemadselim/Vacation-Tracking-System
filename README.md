@@ -20,6 +20,7 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
   - [🧠 Requirements Analysis \& Design](#-requirements-analysis--design)
     - [1. Use Case Diagram](#1-use-case-diagram)
     - [2. Views](#2-views)
+    - [3. State Machine Diagram For A Leave Request](#3-state-machine-diagram-for-a-leave-request)
     - [3. Use Cases designs](#3-use-cases-designs)
   - [📄 Use Case Specifications](#-use-case-specifications)
   - [🛠 Technologies](#-technologies)
@@ -68,6 +69,9 @@ uses the portal’s single-sign-on mechanisms for all authentication.
 
 ### 2. Views
   ![Views](./views/manageLeaveRequestViews%20.png)
+
+### 3. State Machine Diagram For A Leave Request
+  ![State Machine](./diagrams/stateMachineDiagram.png)
 
 ### 3. Use Cases designs
 <details>
