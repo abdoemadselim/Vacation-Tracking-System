@@ -4,7 +4,8 @@
 ```
 function submitRequest:
     isValid = false;
-    while !isValid:
+    employeeLeaveBalance = fetchEmployeeLeaveBalanceFromHRSystem();
+    WHILE !isValid OR employeeLeaveBalance < selectedBalance:
         DISPLAY "Enter title: "
         DISPLAY "Enter description: "
         DISPLAY "Enter date range: "
@@ -14,12 +15,13 @@ function submitRequest:
         leaveRequest = {title, description, dateRange, leaveType}
         displayValidationErrors(validationErrors)
     createdLeaveRequest = createNewLeaveRequestInDatabase(leaveRequest)
-    updateEmployeeLeaveBalance()
-    if needsManager'sApproval:
+    IF needsManager'sApproval:
         addLeaveRequestToManager'sPendingList(createdLeaveRequest)
+        @async
         SendAnEmailNotificationToManager()
-    else
+    ELSE
         approveRequestAutomatically()
+        updateEmployeeLeaveBalance()
 ```
 
 ## Edit Request Function
@@ -32,7 +34,7 @@ function editRequest:
     SET selected_request = GET_CLICKED_ITEM(leave_request_list)
     displayEditableMode()
     isValid = false;  
-    while !isValid:
+    WHILE !isValid:
         DISPLAY "Enter title: "
         DISPLAY "Enter description: "
         DISPLAY "Enter date range: "
@@ -43,6 +45,7 @@ function editRequest:
         displayValidationErrors(validationErrors)
     leaveRequest = updateLeaveRequestInDatabase(leaveRequest)
     updateEmployeeLeaveBalance()
+    @async
     SendAnEmailNotificationToManager()
 ```
 
@@ -54,20 +57,25 @@ function cancelApprovedRequest:
         DISPLAY leave_request_list[index].details
     END FOR
     SET selected_request = GET_CLICKED_ITEM(leave_request_list)
-    cancelRequest(selected_request)
+    IF request in previous 5BD: 
+        DISPLAY "Enter short explanation: "
+        READ cancellation_explanation
+    cancelRequest(selected_request, cancellation_explanation)
     updateEmployeeLeaveBalance()
+    @async
     SendAnEmailNotificationToManager()
 ```
 
 ## Withdraw Pending Request Function
 ```
 function withdrawPendingRequest:
-    leave_request_list = fetchEmployee'sLeaveRequests()
+    leave_request_list = fetchEmployee'sActiveLeaveRequests()
     FOR index = 1 TO leave_request_list.length
         DISPLAY leave_request_list[index].details
     END FOR
     SET selected_request = GET_CLICKED_ITEM(leave_request_list)
     withdrawRequest(selected_request)
     removeLeaveRequestFromManager'sPendingList(leaveRequest)
+    @async
     SendAnEmailNotificationToManager()
 ```

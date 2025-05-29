@@ -19,11 +19,7 @@ The goal is to design and analyze a **Vacation Tracking System** that allows emp
   - [🛠 Constraints](#-constraints)
   - [🧠 Requirements Analysis \& Design](#-requirements-analysis--design)
     - [1. Use Case Diagram](#1-use-case-diagram)
-    - [2. Use Case-Specific Designs](#2-use-case-specific-designs)
-      - [Sequence Diagram](#sequence-diagram)
-      - [ER Diagram](#er-diagram)
-      - [Flow Chart](#flow-chart)
-      - [Pseudocode for the four operations (submit/cancel/withdraw/edit) a leave request](#pseudocode-for-the-four-operations-submitcancelwithdrawedit-a-leave-request)
+    - [2. Use Cases designs](#2-use-cases-designs)
   - [📄 Use Case Specifications](#-use-case-specifications)
   - [🛠 Technologies](#-technologies)
   - [📚 References](#-references)
@@ -39,25 +35,22 @@ A vacation tracking system will provide the employees with an easy way to manage
 2. Managers (approvers) can approve or reject leave requests, with the option to provide a reason for rejection.  
 3. The system must support a fully automated workflow for processing leave requests based on organizational policies.  
 4. Employees can view their own leave balance.  
-5. HR users can access any relevant data for any employee, including leave balance, carryovers, leave history, etc.  
+5. HR users can access any relevant data for any employee, including leave balance, leave history, etc.  
 6. The system must integrate with external HR systems to retrieve employees data for automated workflows.
-7. The system must have a notification mechanism (e.g., email, in-app) to:  
+7. The system must have an email notification mechanism to:  
     - inform employees when their request is approved/rejected  
-    - alert employees about upcoming end-of-leave  
-    - notify managers (approvers) of pending requests  
-8. The HR team can manually approve or reject requests in special cases (e.g., emergencies or out-of-policy requests).  
-9.  The system must support special leave types, such as maternity/paternity leave, with manual intervention by HR.  
-10. The system must allow **report generation** for HR (e.g., department-level leave trends, unused leave statistics).  
-11. The system must **check for conflicts or overlaps**, such as multiple team members requesting leave at the same time.  
-12. The system must track audit logs of leave requests and approvals for accountability and compliance.  
-13. The system must allow managers to directly award personal leave time (with system-set limits).  
-14. The HR team can update the system leave policies.  
+    - notify managers (approvers) of pending requests
+8. The HR team can manually override rules in special cases (e.g., emergencies or out-of-policy requests).  
+9.  The system must track audit logs of leave requests and approvals for accountability and compliance.  
+10. The system must allow managers to directly award personal leave time (with system-set limits).  
+11. The HR team can update the system leave policies.  
 
 ### Non-Functional Requirements (NFR): 
 1. The system must be easy to use, with a clean and intuitive UI for both employees and HR/manager users.
 2. Employees must be able to access only their own data; access to other employees’ data must be restricted according to roles and permissions.
 3. The system must be accessible on both desktop and mobile devices.
-4. The system must ensure role-based access control (RBAC) for different user types (employees, managers, HR).
+4. The system must uses an existing hardware and middleware .
+5. The system must ensure role-based access control (RBAC) for different user types (employees, managers, HR).
 
 ---
 
@@ -65,30 +58,81 @@ A vacation tracking system will provide the employees with an easy way to manage
 1. Is implemented as an extension to the existing intranet portal system, and
 uses the portal’s single-sign-on mechanisms for all authentication.
 2. The system must work on both mobile and desktop devices with a responsive design.
-3. All access and changes to leave data must be logged.
-4. Must comply with different regional leave policies and employment contracts.
+3. The system UI must match with the existing portal design rules and guides
 
 ## 🧠 Requirements Analysis & Design
 
 ### 1. Use Case Diagram
   ![Use Case Diagram](./diagrams/useCaseDiagram.png)
 
-### 2. Use Case-Specific Designs
-**Use Case: Manage Leave Request**  
-#### Sequence Diagram 
-  ![Sequence diagram](./diagrams/ManageLeaveRequestuseSequenceDiagrams.png)
-#### ER Diagram 
-  ![ER diagram](./diagrams/manageLeaveRequestERD.png)
-#### Flow Chart
-  ![Flow chart](./diagrams/manageLeaveRequestFlowCharts.png)
-#### Pseudocode for the four operations (submit/cancel/withdraw/edit) a leave request
-  [Pseudocode](./manageLeaveRequestPseudocode.md)
+### 2. Use Cases designs
+<details>
+  <summary><strong>Manage Leave Request</strong></summary>
+
+  <br/>
+
+  <details>
+    <summary><strong>Sequence Diagram</strong></summary>
+    <br/>
+    <img src="./diagrams/manageRequestSequenceDiagram.png" alt="Sequence diagram" width="600"/>
+  </details>
+
+  <br/>
+
+  <details>
+    <summary><strong>ER Diagram</strong></summary>
+    <br/>
+    <img src="./diagrams/manageLeaveRequestERD.png" alt="ER diagram" width="600"/>
+  </details>
+
+  <br/>
+
+  <details>
+    <summary><strong>Flow Chart</strong></summary>
+    <br/>
+    <img src="./diagrams/manageLeaveRequestFlowCharts.png" alt="Flow chart" width="600"/>
+  </details>
+
+  <br/>
+
+  <details>
+    <summary><strong>Pseudocode for the four operations (submit/cancel/withdraw/edit)</strong></summary>
+    <br/>
+    <a href="./manageLeaveRequestPseudocode.md">View Pseudocode</a>
+  </details>
+
+</details>
+
+<br/>
+
+<details>
+  <summary><strong>Approve Request</strong></summary>
+
+  <details>
+    <summary><strong>Flow Chart</strong></summary>
+    <br/>
+    <img src="./diagrams/approveRequestFlowChart.png" alt="Flow chart" width="600"/>
+  </details>
+
+  <details>
+    <summary><strong>Sequence Diagram</strong></summary>
+    <br/>
+    <img src="./diagrams/approveRequestSequenceDiagram.png" alt="Sequence diagram" width="600"/>
+  </details>
+  
+   <details>
+    <summary><strong>Pseudocode</strong></summary>
+    <br/>
+    <a href="./approveRequestPseudocode.md">View Pseudocode</a>
+  </details>
+</details>
+
 
 
 ## 📄 Use Case Specifications
 
-| Use Case | Description |
-|----------|-------------|
+| Use Case                                                                | Description                                    |
+| ----------------------------------------------------------------------- | ---------------------------------------------- |
 | [`Submit Leave Request`](use-cases-specification/ManageLeaveRequest.md) | Employee submits/cancels/edits a leave request |
 
 ---
