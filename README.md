@@ -52,8 +52,6 @@ A vacation tracking system will provide the employees with an easy way to manage
 2. Employees must be able to access only their own data; access to other employees’ data must be restricted according to roles and permissions.
 3. The system must be accessible on both desktop and mobile devices.
 4. The system must uses an existing hardware and middleware .
-5. The system must ensure role-based access control (RBAC) for different user types (employees, managers, HR).
-
 ---
 
 ## 🛠 Constraints
