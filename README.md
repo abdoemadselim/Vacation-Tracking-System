@@ -63,10 +63,10 @@ uses the portal’s single-sign-on mechanisms for all authentication.
 ## 🧠 Requirements Analysis & Design
 
 ### 1. Use Case Diagram
-  ![Use Case Diagram](./diagrams/useCaseDiagram.png)
+  ![Use Case Diagram](./diagrams/useCaseDiagram.webp)
 
 ### 2. Views
-  ![Views](./views/manageLeaveRequestViews%20.png)
+  ![Views](./views/manageLeaveRequestViews%20.webp)
 
 ### 3. State Machine Diagram For A Leave Request
   ![State Machine](./diagrams/stateMachineDiagram.png)
@@ -88,7 +88,7 @@ uses the portal’s single-sign-on mechanisms for all authentication.
   <details>
     <summary><strong>ER Diagram</strong></summary>
     <br/>
-    <img src="./diagrams/manageLeaveRequestERD.png" alt="ER diagram" width="600"/>
+    <img src="./diagrams/manageLeaveRequestERD.webp" alt="ER diagram" width="600"/>
   </details>
 
   <br/>
@@ -96,7 +96,7 @@ uses the portal’s single-sign-on mechanisms for all authentication.
   <details>
     <summary><strong>Flow Chart</strong></summary>
     <br/>
-    <img src="./diagrams/manageLeaveRequestFlowCharts.png" alt="Flow chart" width="600"/>
+    <img src="./diagrams/manageLeaveRequestFlowCharts.webp" alt="Flow chart" width="600"/>
   </details>
 
   <br/>
